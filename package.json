@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@aws-sdk/util-endpoints": "^3.775.0"
+  }
+}
