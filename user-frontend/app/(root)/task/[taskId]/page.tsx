@@ -3,6 +3,8 @@ import { Appbar } from '@/components/Appbar';
 import { BACKEND_URL } from '@/utils';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Image from 'next/image'
+
 
 export default function Page({ params: { taskId } }: { params: { taskId: string } }) {
     const [result, setResult] = useState<Record<string, {
@@ -55,7 +57,7 @@ export default function Page({ params: { taskId } }: { params: { taskId: string 
 function Task({ imageUrl, votes }: { imageUrl: string; votes: number }) {
     return (
         <div>
-            <img className="p-2 w-96 rounded-md" src={imageUrl} />
+           <Image src="/image.png" alt="Description" width={500} height={300} />
             <div className='flex justify-center'>
                 {votes}
             </div>
