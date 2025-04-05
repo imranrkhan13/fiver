@@ -2,6 +2,8 @@
 import { BACKEND_URL, CLOUDFRONT_URL } from "@/utils";
 import axios from "axios";
 import { useState } from "react";
+import Image from 'next/image'
+
 
 export function UploadImage({ onImageAdded, image }: {
     onImageAdded: (image: string) => void;
@@ -40,7 +42,7 @@ export function UploadImage({ onImageAdded, image }: {
     }
 
     if (image) {
-        return <img className="p-2 w-96 rounded" src={image} />;
+        return <Image src="/image.png" alt="Description" width={500} height={300} />
     }
 
     return (
